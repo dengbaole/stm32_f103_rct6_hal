@@ -13,6 +13,8 @@ void platform_init(void) {
 	delay_init(72);                     /* 延时初始化 */
 	app_sched_init();
 	user_event_init();
-	
-	led_init();  
+
+	module_init();
+	btim_timx_int_init(100 - 1, 720 - 1); // 1ms中断
+	led_init();
 }
