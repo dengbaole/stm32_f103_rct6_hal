@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Drivers\CMSIS\Device\ST\STM32F1xx\Include;.\Drivers\STM32F1xx_HAL_Driver\Inc;.\Drivers\CMSIS\Include;.\Drivers;.\moudle</IncludePath>
+              <IncludePath>.\Drivers\CMSIS\Device\ST\STM32F1xx\Include;.\Drivers\STM32F1xx_HAL_Driver\Inc;.\Drivers\CMSIS\Include;.\Drivers;.\moudle;.\utils</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -432,6 +432,16 @@
               <FileName>platform.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\moudle\platform.c</FilePath>
+            </File>
+            <File>
+              <FileName>scheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\utils\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>uevent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\utils\uevent.c</FilePath>
             </File>
           </Files>
         </Group>
