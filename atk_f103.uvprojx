@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Drivers\CMSIS\Device\ST\STM32F1xx\Include;.\Drivers\STM32F1xx_HAL_Driver\Inc;.\Drivers\CMSIS\Include;.\Drivers;.\Users</IncludePath>
+              <IncludePath>.\Drivers\CMSIS\Device\ST\STM32F1xx\Include;.\Drivers\STM32F1xx_HAL_Driver\Inc;.\Drivers\CMSIS\Include;.\Drivers;.\moudle</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -391,42 +391,42 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>User</GroupName>
+          <GroupName>moudle</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Users\main.c</FilePath>
+              <FilePath>.\moudle\main.c</FilePath>
             </File>
             <File>
               <FileName>stm32f1xx_it.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Users\stm32f1xx_it.c</FilePath>
+              <FilePath>.\moudle\stm32f1xx_it.c</FilePath>
             </File>
             <File>
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/SYSTEM</GroupName>
-          <Files>
             <File>
-              <FileName>sys.c</FileName>
+              <FileName>led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Drivers\SYSTEM\sys\sys.c</FilePath>
+              <FilePath>.\moudle\led.c</FilePath>
             </File>
             <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Drivers\SYSTEM\delay\delay.c</FilePath>
+              <FilePath>.\moudle\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moudle\sys.c</FilePath>
             </File>
             <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Drivers\SYSTEM\usart\usart.c</FilePath>
+              <FilePath>.\moudle\usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -482,13 +482,6 @@
         </Group>
         <Group>
           <GroupName>Drivers/BSP</GroupName>
-          <Files>
-            <File>
-              <FileName>led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Drivers\BSP\LED\led.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Readme</GroupName>
@@ -509,5 +502,14 @@
     <components/>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>atk_f103</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
