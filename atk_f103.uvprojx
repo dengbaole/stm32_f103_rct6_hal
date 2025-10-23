@@ -409,9 +409,9 @@
               <FilePath>.\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c</FilePath>
             </File>
             <File>
-              <FileName>led.c</FileName>
+              <FileName>led_drv.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\moudle\led.c</FilePath>
+              <FilePath>.\moudle\led_drv.c</FilePath>
             </File>
             <File>
               <FileName>delay.c</FileName>
@@ -427,6 +427,11 @@
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\moudle\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>platform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moudle\platform.c</FilePath>
             </File>
           </Files>
         </Group>
