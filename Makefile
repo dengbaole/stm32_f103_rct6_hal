@@ -1,6 +1,6 @@
 
 
-project_name := Template
+project_name := atk_f103
 uvproj_path := .
 day_version := 99
 .PHONY: default build cformat format clean flash debug assets
@@ -21,8 +21,8 @@ dist:
 
 build:
 	@echo [START]----- UV build -----
-	@- UV4 -b $(uvproj_path)/$(project_name).uvprojx -j0 -o ./Obj/Build_Output.txt
-	@- powershell -c "cat $(uvproj_path)./Obj/Build_Output.txt | sls 'error'"
+	@- UV4 -b $(uvproj_path)/$(project_name).uvprojx -j0 -o ./Output/Build_Output.txt
+	@- powershell -c "cat $(uvproj_path)./Output/Build_Output.txt | sls 'error'"
 	@echo [ END ]----- UV build -----
 
 clean:
@@ -32,9 +32,9 @@ clean:
 
 flash:
 	@echo [START]----- UV flash -----
-	@- UV4 -b $(uvproj_path)/$(project_name).uvprojx -j0 -o ./Obj/Build_Output.txt
-	@- UV4 -f $(uvproj_path)/$(project_name).uvprojx -j0 -o ./Obj/Build_Output.txt
-	@- powershell -c cat $(uvproj_path)/Obj/Build_Output.txt
+	@- UV4 -b $(uvproj_path)/$(project_name).uvprojx -j0 -o ./Output/Build_Output.txt
+	@- UV4 -f $(uvproj_path)/$(project_name).uvprojx -j0 -o ./Output/Build_Output.txt
+	@- powershell -c cat $(uvproj_path)/Output/Build_Output.txt
 	@echo [ END ]----- UV flash -----
 
 debug:
