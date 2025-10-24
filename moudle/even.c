@@ -93,15 +93,26 @@ void main_handler(uevt_t* evt) {
 
 			// lv_timer_handler();
 			tick_10MS++;
-			if(tick_10MS % 100 == 0) {
+			if(tick_10MS % 300 == 0) {
+				HAL_GPIO_TogglePin(LED_R_PORT, LED_R_PIN);
+				// HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
+				// HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
+			}
+			if(tick_10MS % 300 == 100) {
+				HAL_GPIO_TogglePin(LED_R_PORT, LED_R_PIN);
 				HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
+				// HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
+			}
+			if(tick_10MS % 300 == 200) {
+				// HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
+				HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
+				HAL_GPIO_TogglePin(LED_B_PORT, LED_B_PIN);
 			}
 			break;
 		case UEVT_RTC_1MS:
 			// tick_1MS++;
 			// lv_tick_inc(1);
 			break;
-
 		case UEVT_APP_START:
 			started = true;
 			break;

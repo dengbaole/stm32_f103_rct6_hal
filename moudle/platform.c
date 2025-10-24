@@ -17,4 +17,5 @@ void platform_init(void) {
 	module_init();
 	btim_timx_int_init(100 - 1, 720 - 1); // 1ms中断
 	led_init();
+	spi2_init();
 }

@@ -453,6 +453,16 @@
               <FileType>1</FileType>
               <FilePath>.\moudle\bsp_timer.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moudle\bsp_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\moudle\lcd_init.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -513,6 +523,11 @@
               <FileType>1</FileType>
               <FilePath>.\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -522,9 +537,9 @@
           <GroupName>Readme</GroupName>
           <Files>
             <File>
-              <FileName>readme.txt</FileName>
+              <FileName>readme.md</FileName>
               <FileType>5</FileType>
-              <FilePath>.\readme.txt</FilePath>
+              <FilePath>.\readme.md</FilePath>
             </File>
           </Files>
         </Group>

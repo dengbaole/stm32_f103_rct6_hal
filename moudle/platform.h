@@ -12,6 +12,9 @@
 #include "delay.h"
 #include "led_drv.h"
 #include "bsp_timer.h"
+#include "bsp_spi.h"
+#include "lcd_init.h"
+#include <string.h>
 
 //事件定义
 #define UEVT_APP_BASE (0xAE00)
