@@ -47,6 +47,7 @@ void main_handler(uevt_t* evt) {
 		// lv_label_set_text(mylabel, "hello world!");
 		// lv_obj_align(mylabel, LV_ALIGN_CENTER, 0, 0);
 		// lv_obj_align_to(mybtn, mylabel, LV_ALIGN_OUT_TOP_MID, 0, 0);
+			break;
 		case UEVT_RTC_10MS:
 			// if(started) {
 			// 	//LOG_HEAD("[%08d]:\n", tick++);
@@ -91,6 +92,10 @@ void main_handler(uevt_t* evt) {
 			// }
 
 			// lv_timer_handler();
+			tick_10MS++;
+			if(tick_10MS % 100 == 0){
+				HAL_GPIO_TogglePin(LED_G_PORT,LED_G_PIN);
+			}
 			break;
 		case UEVT_RTC_1MS:
 			// tick_1MS++;
