@@ -21,32 +21,32 @@ void main_handler(uevt_t* evt) {
 	static uint16_t t_10ms = 0;
 	switch(evt->evt_id) {
 		case UEVT_APP_BOOT:
-		// lcd_gpio_init();
-		// flash_gpio_init();
-		// spi2_init();
-		// SPI_FLASH_TYPE = flash_reas_id(); //读取FLASH ID.
-		// lcd_init();//LCD初始化
-		// led_init();//LED初始化
-		// lcd_clear(0, 0, LCD_W, LCD_H, RED);
-		// LCD_BL_ON();//打开背光
+			// lcd_gpio_init();
+			// flash_gpio_init();
+			// spi2_init();
+			// SPI_FLASH_TYPE = flash_reas_id(); //读取FLASH ID.
+			// lcd_init();//LCD初始化
+			// led_init();//LED初始化
+			// lcd_clear(0, 0, LCD_W, LCD_H, RED);
+			// LCD_BL_ON();//打开背光
 
-		// lv_init();
-		// lv_port_disp_init();//显示
-		// // lv_port_indev_init();  //触控
+			// lv_init();
+			// lv_port_disp_init();//显示
+			// // lv_port_indev_init();  //触控
 
-		// lv_obj_t* mybtn = lv_btn_create(lv_scr_act());
-		// lv_obj_set_pos(mybtn, 5, 5);
-		// lv_obj_set_size(mybtn, 5, 5);
+			// lv_obj_t* mybtn = lv_btn_create(lv_scr_act());
+			// lv_obj_set_pos(mybtn, 5, 5);
+			// lv_obj_set_size(mybtn, 5, 5);
 
 
-		// lv_obj_t* label_btn = lv_label_create(mybtn);
-		// lv_obj_align(label_btn, LV_ALIGN_CENTER, 0, 0);
-		// lv_label_set_text(label_btn, "test");
+			// lv_obj_t* label_btn = lv_label_create(mybtn);
+			// lv_obj_align(label_btn, LV_ALIGN_CENTER, 0, 0);
+			// lv_label_set_text(label_btn, "test");
 
-		// lv_obj_t* mylabel = lv_label_create(lv_scr_act());
-		// lv_label_set_text(mylabel, "hello world!");
-		// lv_obj_align(mylabel, LV_ALIGN_CENTER, 0, 0);
-		// lv_obj_align_to(mybtn, mylabel, LV_ALIGN_OUT_TOP_MID, 0, 0);
+			// lv_obj_t* mylabel = lv_label_create(lv_scr_act());
+			// lv_label_set_text(mylabel, "hello world!");
+			// lv_obj_align(mylabel, LV_ALIGN_CENTER, 0, 0);
+			// lv_obj_align_to(mybtn, mylabel, LV_ALIGN_OUT_TOP_MID, 0, 0);
 			break;
 		case UEVT_RTC_10MS:
 			// if(started) {
@@ -93,8 +93,8 @@ void main_handler(uevt_t* evt) {
 
 			// lv_timer_handler();
 			tick_10MS++;
-			if(tick_10MS % 100 == 0){
-				HAL_GPIO_TogglePin(LED_G_PORT,LED_G_PIN);
+			if(tick_10MS % 100 == 0) {
+				HAL_GPIO_TogglePin(LED_G_PORT, LED_G_PIN);
 			}
 			break;
 		case UEVT_RTC_1MS:
