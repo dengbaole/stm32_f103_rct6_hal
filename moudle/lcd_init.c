@@ -12,19 +12,38 @@ void lcd_gpio_init(void) {
 	__HAL_RCC_GPIOC_CLK_ENABLE();
 	__HAL_RCC_GPIOD_CLK_ENABLE();
 
-	GPIO_InitStruct.Pin = LCD_SPI_PIN_SCK | LCD_SPI_PIN_MOSI;  // SCK, MOSI
+	GPIO_InitStruct.Pin = LCD_SPI_PIN_SCK ;  // SCK, MOSI
+	GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+	GPIO_InitStruct.Pin =  LCD_SPI_PIN_MOSI;  // SCK, MOSI
 	GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 
-	GPIO_InitStruct.Pin = LCD_BLK_PIN | LCD_RES_PIN|LCD_DC_PIN;  // SCK, MOSI
+	GPIO_InitStruct.Pin = LCD_BLK_PIN ;  // SCK, MOSI
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	LCD_BL_OFF();
+	GPIO_InitStruct.Pin =  LCD_RES_PIN;  // SCK, MOSI
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+
+	GPIO_InitStruct.Pin = LCD_DC_PIN;  // SCK, MOSI
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	
 
 	
 
