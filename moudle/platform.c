@@ -22,6 +22,6 @@ void platform_init(void) {
 	lcd_init();
 	lcd_clear(0, 0, LCD_W, LCD_H, RED);
 	LCD_BL_ON();//打开背光
-	LCD_BL_OFF();
+	// LCD_BL_OFF();
 
 }
