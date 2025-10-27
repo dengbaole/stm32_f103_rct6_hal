@@ -20,7 +20,8 @@ void platform_init(void) {
 	lcd_gpio_init();
 	spi2_init();
 	lcd_init();
-	lcd_clear(0, 0, LCD_W, LCD_H, RED);
+	lcd_clear(0, 0, LCD_W, LCD_H, LBBLUE);
+	lcd_clear(0, 0, 4, 4, RED);
 	LCD_BL_ON();//打开背光
 	// LCD_BL_OFF();
 

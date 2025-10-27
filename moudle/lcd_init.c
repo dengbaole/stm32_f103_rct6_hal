@@ -225,17 +225,17 @@ void lcd_init(void) {
 void lcd_clear(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, uint16_t color) {
 	uint16_t i, j;
 	tftSetWindows(xsta, ysta, xend - 1, yend - 1); //设置显示范围
-	// for(i = ysta; i < yend; i++) {
-	// 	for(j = xsta; j < xend; j++) {
-	// 		LCD_WR_DATA(color);
-	// 	}
-	// }
-	memset(display_buff, 0x66, 160);
 	TFT_RS_DATA();  // 数据模式
 	TFT_CS_LOW();
-	for(uint16_t i = 0; i < 160; i++) {
-		SPI2_SendData_DMA(display_buff, 160);
+	for(i = ysta; i < yend; i++) {
+		for(j = xsta; j < xend; j++) {
+			LCD_WR_DATA(color);
+		}
 	}
+	// memset(display_buff, 0x12, 160);
+	// for(uint16_t i = 0; i < 160; i++) {
+	// 	SPI2_SendData_DMA(display_buff, 160);
+	// }
 
 	TFT_CS_HIGH();
 }
